@@ -1,0 +1,13 @@
+name: greet
+on: workflow_dispatch:
+  inputs:
+    name:
+      description: "The name of the person to greet"
+      required: true
+      type: string
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet
+        run: echo "hello, ${{ inputs.name }}!"
