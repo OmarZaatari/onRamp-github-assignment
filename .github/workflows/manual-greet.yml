@@ -11,4 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Greet
-        run: echo "hello, ${{ github.event.inputs.name }}!, or github actor: ${{ github.actor }} or env var: $GITHUB_ACTOR"
+        run: |
+          echo "hello, ${{ inputs.name }}!"
+          echo "github actor: ${{ github.actor }}"
+          echo "env var: $GITHUB_ACTOR"
